@@ -31,16 +31,3 @@ app.get("/success", function(req, res) {
 //user id
 //77fc775adb.
 
-const mailchimp = require("@mailchimp/mailchimp_marketing");
-
-mailchimp.setConfig({
-    apiKey: "f8cc5a519d8b215346c19e8e227a3968-us21",
-    server: "us21",
-});
-
-async function run() {
-    const response = await mailchimp.ping.get();
-    console.log(response);
-}
-
-run();
